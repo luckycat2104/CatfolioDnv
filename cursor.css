@@ -1,0 +1,7 @@
+*{
+    cursor: url(./src/paw.png), default;
+}
+
+.espada{
+    cursor: url(./src/sword.png), auto;
+}

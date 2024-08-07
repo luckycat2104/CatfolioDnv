@@ -1,0 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html,
+body {
+    background-color: rgb(13, 12, 29);
+    min-height: 100%
+}
+
