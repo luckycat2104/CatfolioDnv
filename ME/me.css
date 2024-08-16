@@ -20,8 +20,10 @@ body {
     font-family: 'Malonet', sans-serif;
     margin-left: 10vw;
     margin-top: 3vh;
-    background-color: bisque;
-    height: 40vh;
-    width: 33vw;
+    background-color: rgb(172, 152, 245);
+    height: 53vh;
+    width: 35vw;
     border-radius: 2vh;
+    padding: 2vw;
+    text-align: justify;
 }
