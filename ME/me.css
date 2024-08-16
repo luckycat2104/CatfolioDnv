@@ -8,3 +8,20 @@ body {
     min-height: 100%
 }
 
+.tituuulo{
+    font-family: 'Concielian Break', sans-serif;
+    color: rgb(129, 230, 255);
+    font-size: 5vw;
+    margin-left: 10vw;
+    margin-top: 13vh;
+}
+
+.Textoeu{
+    font-family: 'Malonet', sans-serif;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    background-color: bisque;
+    height: 40vh;
+    width: 33vw;
+    border-radius: 2vh;
+}
