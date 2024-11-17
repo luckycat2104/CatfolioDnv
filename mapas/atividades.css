@@ -5,9 +5,13 @@
 }
 html,
 body {
-    background-color: rgb(13, 12, 29);
-    min-height: 100%
+    background-image: url(./src/atividades.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 
 .tituloATIVIDADES{
     color: rgb(236, 155, 155);
@@ -43,13 +47,25 @@ body {
     background-color: transparent;
 }
 
+
+#titulo{
+    font-size: larger;
+}
+
+#desc{
+    font-size: medium;
+    font-weight: 400;
+}
+
 .atividades{
-    display: flex ;
-    background-color: aquamarine;
+    background-color:rgba(0, 0, 0, 0.7);
     margin-left: 50%;
     margin-right: 5%;
     margin-top: -20%;
     height: 400px;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
 }
 
 
