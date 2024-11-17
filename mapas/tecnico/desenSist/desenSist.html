@@ -15,7 +15,7 @@
 </head>
 <body>
     <h1 class="tituloATIVIDADES" >Atividades de Desenvolvimento de sistemas</h1>
-    <div class="accordion" id="accordionExample">
+    <!--<div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -69,27 +69,32 @@
             </div>
           </div>
         </div>
-      </div>
-      <div>
+      </div> -->
+      <div class="grid">   
+        <div class="item empty"></div>
         <div class="seta" id="cima">
-          <p>seta cima</p>
+          <img src="../../src/cima.png">
         </div>
-        <div class="seta" id="baixo">
-          <p>seta baixo</p>
-        </div>
+        <div class="item empty"></div>
         <div class="seta" id="esquerda">
-          <p>seta esquerda</p>
+          <img src="../../src/esquerda.png">
         </div>
+        <div class="item empty"></div>
         <div class="seta" id="direita">
-          <p>seta direita</p>
+          <img src="../../src/direita.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="baixo">
+          <img src="../../src/baixo.png">
         </div>
       </div>
-      <div>
+      <div class="atividades">
         <img src="" id="img" />
         <h2 id="titulo"></h2>
         <h4 id="desc"></h4>
-      </div>
+      </div> 
 </body>
+
 <script>
   var trimestre = 0; //trimestre que está agora
   var att = 0; //atividade que está agora
@@ -98,7 +103,7 @@
     { //trimestre 1
       "data": [ //lista de atividades
           {
-            "titulo": "Calculadora de Horas em React",                                                                        //colocar isso
+            "titulo": "Calculadora de Horas em React",                                             
             "desc": "Essa foi uma introdução à React.",
             "link": "https://github.com/luckycat2104/Calculador-de-Horas/tree/main",
             "src": "../../src/exemplo.png",
@@ -115,32 +120,17 @@
             "link": "https://www.canva.com/design/DAF-KhXN1Dc/CRgHj1fV4sCpW9Bjg_-NbQ/edit",
             "src": "../../src/exemplo.png"
           },
-          {
+          
+      ]
+    },
+    { //trimestre 2
+      "data": [
+      {
             "titulo": "Projeto Biblioteca",
             "desc": "Essa foi uma atividade para os alunos praticarem JAVA.",
             "link": "https://github.com/luckycat2104/bibliotecaBatata",
             "src": "../../src/exemplo.png"
           }
-      ]
-    },
-    { //trimestre 2
-      "data": [
-        {
-            "titulo": "tewte",
-            "desc": "Essa foi uma introdução à React.",
-            "link": "",
-            "src": "../../src/exemplo.png",
-          },
-      ]
-    },
-    { //trimestre 3
-      "data": [
-        {
-
-        },
-        {
-          
-        }
       ]
     }
   ]

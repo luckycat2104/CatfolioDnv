@@ -22,8 +22,34 @@ body {
     margin-left: 7vw;
 }
 
-.seta {
-    color: red;
+.seta > img{
+    width: 100px;
+}
+
+.seta:hover{
+    transform: scale(1.1);    
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.empty {
+    background-color: transparent;
+}
+
+.atividades{
+    display: flex ;
+    background-color: aquamarine;
+    margin-left: 50%;
+    margin-right: 5%;
+    margin-top: -20%;
+    height: 400px;
 }
 
 

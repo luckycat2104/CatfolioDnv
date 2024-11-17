@@ -4,8 +4,11 @@
 }
 html,
 body {
-    background-color: rgb(13, 12, 29);
-    min-height: 100%
+    background-image:url(./src/mapas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 #titulomapa{
