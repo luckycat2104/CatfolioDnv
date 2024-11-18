@@ -17,6 +17,10 @@ a{
     color: rgb(236, 155, 155);
 }
 
+a:hover{
+    cursor: url(../src/sword.png), auto;
+}
+
 .tituloATIVIDADES{
     color: rgb(236, 155, 155);
     font-family: 'Concielian Break', sans-serif;
@@ -44,7 +48,7 @@ a{
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 10px;
-    margin-left: 20px;
+    margin-left: 10%;
 }
 
 .empty {
