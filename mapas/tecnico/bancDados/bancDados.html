@@ -196,6 +196,20 @@
       mudar_coisas(trimestre, att);
     }
   });
+  $(document).keydown(function(event) {
+    if(event.which === 37) {
+      $("#esquerda").click();
+    }
+    if(event.which === 39) {
+      $("#direita").click();
+    }
+    if(event.which === 38) {
+      $("#cima").click();
+    }
+    if(event.which === 40) {
+      $("#baixo").click();
+    }
+  });
 </script>
 </body>
 </html>

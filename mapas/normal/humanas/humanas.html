@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.cdnfonts.com/css/concielian-break" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/malonet" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../atividades.css">
+    <link rel="stylesheet" href="../../../cursor.css">
+    <title>Humanas</title>
+</head>
+<body>
+    <h1 class="tituloATIVIDADES" >Atividades de Humanas</h1>
+      <div class="grid">   
+        <div class="item empty"></div>
+        <div class="seta" id="cima">
+          <img src="../../src/cima.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="esquerda">
+          <img src="../../src/esquerda.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="direita">
+          <img src="../../src/direita.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="baixo">
+          <img src="../../src/baixo.png">
+        </div>
+      </div>
+      <div class="atividades">
+        <img src="" id="img" />
+        <h2 id="titulo"></h2>
+        <h4 id="desc"></h4>
+      </div> 
+</body>
+
+<script>
+  var trimestre = 0; //trimestre que está agora
+  var att = 0; //atividade que está agora
+
+  var coisas = [ 
+    { //trimestre 1
+      "data": [ //lista de atividades
+          {
+            "titulo": "Regimes totalitaristas",                                             
+            "desc": "1° Trimestre - Nessa atividade, cada grupo escolheu um país para apresentar sobre sua realidade e geopolítica para a turma, com essa atividade conseguimos analisar as nuances culturais, políticas e econômicas de diversas regiões, assim sendo capazes de ampliar nossa visão de mundo e estando mais preparados e lucidos sobre as questões atuais ao redor do mundo. Foi uma atividade muito interessante para mim, que adoro aprender sobre outros países.",
+            "link": "https://www.canva.com/design/DAF77AS2qww/4T3mEHR3wFos19uviXVuxA/view?utm_content=DAF77AS2qww&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../src/nepal.png",
+          },
+          {
+            "titulo": "O Imperialismo na América",                                             
+            "desc": "1° Trimestre - Essa atividade nos ajudou a compreender a história global, as relações internacionais e as consequências das ações imperiais em várias partes do mundo. Isso nos permite refletir criticamente sobre o poder, desigualdade e os desafios enfrentados no cenário internacional, promovendo um diálogo informado e consciente sobre as relações de poder globais. Gostei da atividade porque me permite criticar os EUA de uma forma mais inteligente.",
+            "link": "https://www.canva.com/design/DAGBZTHwSSw/k0Ztt7Oow9mCNXdFpIKRQQ/view?utm_content=DAGBZTHwSSw&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../src/eua.png",
+          } 
+      ]
+    },
+    { //trimestre 2
+      "data": [
+      {
+            "titulo": "Regimes totalitaristas",
+            "desc": "2° Trimestre - Essa atividade é saber mais sobre regimes totalitários, como o nazifascismo e o stalinismo, ao analisar um filme que retrata essas ideologias. Ao assistir e identificar cenas e falas, posso desenvolver um olhar crítico, essencial para não ladaínha de politico. A decisão do filme foi em base de um conhecimento de prévio curiosidades, e para apresentar o filme escolhido, criamos um slide no canva com cenas e algumas observações. Habilidades: C2 H10 C6 H39",
+            "link": "https://www.canva.com/design/DAGHFEz61Is/58iQxUtshcj1bN8_5MMMvA/view?utm_content=DAGHFEz61Is&utm_campaign=designshare&utm_medium=link&utm_source=editor#1",
+            "src": "../src/totalitarismo.png"
+          },
+          {
+            "titulo": "Urbanismo e cultura no começo do século XX",
+            "desc": "2° Trimestre - Essa atividade foi explorar e compreender melhor o Brasil do início do século XX, utilizando imagens do acervo Brasiliana Fotográfica, focando em temas como arquitetura, conflitos ou economia. Essa atividades me fez refletir sobre como o passado moldou a sociedade atual. Para fazer a atividade, procuramos o que aparecia em mais de uma imagem para podermos fazer alguma relação entre elas. Habilidades: C4 H22 H24",
+            "link": "https://www.canva.com/design/DAGGa9PcqXE/niNrvcBQOL692QgwoPlMWw/view?utm_content=DAGGa9PcqXE&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../src/urbCult.png"
+          }
+      ]
+    },
+    { //trimestre 3
+      "data": [
+      {
+            "titulo": "Guerra Fria",
+            "desc": "3° Trimestre - A atividade proposta nos desafiou a explorar a complexidade da Guerra Fria através de uma apresentação de slides, utilizando os personagens Brimstone e Sova para representar os lados americano e soviético. Optamos por esse enfoque para ilustrar as tensões e estratégias envolvidas no conflito. A pesquisa nos levou a abordar vários aspectos, desde a ameaça nuclear até a formação de ditaduras, passando pela rivalidade esportiva e armamentos desenvolvidos. Essa experiência não apenas ampliou nosso conhecimento sobre a Guerra Fria, mas também nos permitiu refletir sobre as lições que ainda ressoam nos dias atuais.  habilidades: C6 H39 H40 C5 H28 H30 H32 ",
+            "link": "https://www.canva.com/design/DAGSPLkki_M/KOclpyMSlwIAHsKIKEcmSQ/view?utm_content=DAGSPLkki_M&utm_campaign=designshare&utm_medium=link&utm_source=editor&authuser=0",
+            "src": "../src/guerraFria.png"
+          },
+          {
+            "titulo": "Avaliação Plurall",
+            "desc": "3° Trimestre - Essa atividade nos ajudou a entender como a inteligência artificial pode ser uma ferramenta útil, mas também ressaltou a importância da análise humana em contextos históricos e sociais, onde nuances e significados profundos devem ser considerados. A atividade não apenas enriqueceu nosso conhecimento sobre a Ditadura, mas também nos incentivou a pensar criticamente sobre as fontes e métodos de ensino.",
+            "link": "https://docs.google.com/document/d/16FvufhjAYUr63HTJDvpAkjJymyTjB0DLDxp_4xDfVHU/edit?usp=sharing",
+            "src": "../src/plurall.png"
+          }
+      ]
+    }
+  ]
+
+  function mudar_coisas(trimestre, att) {
+      try { //muda titulo, descrição e imagem de acordo com trimestre e att selecionados
+        $("#titulo").text(coisas[trimestre].data[att].titulo);
+        $("#desc").text(coisas[trimestre].data[att].desc);
+        $("#desc").append(`<a id="linkzao" href="${coisas[trimestre].data[att].link}" target="_blank"> Clique aqui.</a>`);
+        $("#img").attr("src", coisas[trimestre].data[att].src);
+      }
+      catch(e) {
+        console.log(e);
+      }
+  }
+
+  //define oq acontece quando clica em alguma seta
+  $(".seta").on("click", function() {
+    try {
+      let proximo_tri = null;
+      let proxima_att = null;
+      let direcao = $(this).attr("id");
+      switch(direcao) {
+        case "cima":
+          proximo_tri = trimestre - 1;
+          break;
+        case "baixo":
+          proximo_tri = trimestre + 1;
+          break;
+        case "esquerda":
+          proxima_att = att - 1;
+          break;
+        case "direita":
+          proxima_att = att + 1;
+          break;
+      }
+      if(proximo_tri != null && proximo_tri >= 0 && proximo_tri < coisas.length) {
+        trimestre = proximo_tri;
+        mudar_coisas(trimestre, 0);
+      }
+      if(proxima_att != null && proxima_att >= 0 && proxima_att < coisas[trimestre].data.length) {
+        att = proxima_att;
+        mudar_coisas(trimestre, att);
+      }
+      return;
+    }
+    catch(e) {
+      console.log(e);
+    }
+  })
+
+  $(document).ready(function() {
+    let inicial = new URLSearchParams(window.location.search);
+    inicial = inicial.get("inicial"); //para fazer o trimestre ser diferente
+    if(inicial) {
+      mudar_coisas(inicial-1, 0);
+      trimestre = inicial;
+    } else {
+      mudar_coisas(trimestre, att);
+    }
+  });
+  $(document).keydown(function(event) {
+    if(event.which === 37) {
+      $("#esquerda").click();
+    }
+    if(event.which === 39) {
+      $("#direita").click();
+    }
+    if(event.which === 38) {
+      $("#cima").click();
+    }
+    if(event.which === 40) {
+      $("#baixo").click();
+    }
+  });
+</script>
+</html>

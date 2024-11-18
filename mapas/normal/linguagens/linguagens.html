@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.cdnfonts.com/css/concielian-break" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/malonet" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../atividades.css">
+    <link rel="stylesheet" href="../../../cursor.css">
+    <title>Linguagens</title>
+</head>
+<body>
+    <h1 class="tituloATIVIDADES" >Atividades de Linguagens</h1>
+      <div class="grid">   
+        <div class="item empty"></div>
+        <div class="seta" id="cima">
+          <img src="../../src/cima.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="esquerda">
+          <img src="../../src/esquerda.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="direita">
+          <img src="../../src/direita.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="baixo">
+          <img src="../../src/baixo.png">
+        </div>
+      </div>
+      <div class="atividades">
+        <img src="" id="img" />
+        <h2 id="titulo"></h2>
+        <h4 id="desc"></h4>
+      </div> 
+</body>
+
+<script>
+  var trimestre = 0; //trimestre que está agora
+  var att = 0; //atividade que está agora
+
+  var coisas = [ 
+    { //trimestre 1
+      "data": [ //lista de atividades
+          {
+            "titulo": "Simple Past",                                             
+            "desc": "1° Trimestre - Com essa atividade aprendemos a expressar ações e eventos que ocorreram em um tempo passado específico, achei essa atividade querida.",
+            "link": "https://www.canva.com/design/DAGBjebmpqc/GV5HsYG2c8vMLn7OhPb0Jg/view?utm_content=DAGBjebmpqc&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png",
+          },
+          {
+            "titulo": "Pré-modernismo",
+            "desc": "1° Trimestre - Essa atividade nos ajudou a compreender as raízes e as influências que deram origem a literatura brasileira, mostrando as transições culturais, sociais e estilísticas que antecedem o modernismo, essa atividdade foi muito interssante se fazer, ja que pesquisar e ir atras é uma ótima forma de aprender.",
+            "link": "https://www.canva.com/design/DAF9nA8z02k/K3C5nvk8iNr_OHak5ls5Yw/edit?utm_content=DAF9nA8z02k&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+            "src": "../../src/exemplo.png",
+          },
+          {
+            "titulo": "Revista Literaria",
+            "desc": "1° Trimestre - Foi elaborado sala de aula uma revista sobre os livros que caem em vestibulares, qual ao longo do ano, faremos atividades diferentes e as colocaremos nessa revista. Ela nos ajudará a ter uma visão mais profunda sobre estes livros.",
+            "link": "https://www.canva.com/design/DAGPVPKUN8Q/dYjvnfGnvv_TfINd0WMQqQ/view?utm_content=DAGPVPKUN8Q&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+          
+      ]
+    },
+    { //trimestre 2
+      "data": [
+      {
+            "titulo": "Redação Online",
+            "desc": "2° Trimestre - Escrever é uma forma de expressar as ideias de forma organizada e clara, essa prática é essencial para desenvolver minha capacidade de argumentação, raciocínio crítico e criatividade. Além de ser importante para o vestibular e futuros trabalhos.",
+            "link": "#",
+            "src": "../src/redacao.png"
+          }
+      ]
+    },
+    { //trimestre 3
+      "data": [
+      {
+            "titulo": "Redação Online",
+            "desc": "3° Trimestre - Escrever é uma forma de expressar as ideias de forma organizada e clara, essa prática é essencial para desenvolver minha capacidade de argumentação, raciocínio crítico e criatividade. Além de ser importante para o vestibular e futuros trabalhos.",
+            "link": "#",
+            "src": "../src/redacao3.png"
+          },
+          {
+            "titulo": "Curriculo português e inglês",
+            "desc": "3° Trimestre - É importante ter um curriculo organizado, e com versões em outros idiomas, para ter mais oportunidades de emprego.",
+            "link": "https://www.canva.com/design/DAGBdOOBjuI/V6Ls3F6WIIs3Tqhe0dRTQA/view?utm_content=DAGBdOOBjuI&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          }
+      ]
+    }
+  ]
+
+  function mudar_coisas(trimestre, att) {
+      try { //muda titulo, descrição e imagem de acordo com trimestre e att selecionados
+        $("#titulo").text(coisas[trimestre].data[att].titulo);
+        $("#desc").text(coisas[trimestre].data[att].desc);
+        $("#desc").append(`<a id="linkzao" href="${coisas[trimestre].data[att].link}" target="_blank"> Clique aqui.</a>`);
+        $("#img").attr("src", coisas[trimestre].data[att].src);
+      }
+      catch(e) {
+        console.log(e);
+      }
+  }
+
+  //define oq acontece quando clica em alguma seta
+  $(".seta").on("click", function() {
+    try {
+      let proximo_tri = null;
+      let proxima_att = null;
+      let direcao = $(this).attr("id");
+      switch(direcao) {
+        case "cima":
+          proximo_tri = trimestre - 1;
+          break;
+        case "baixo":
+          proximo_tri = trimestre + 1;
+          break;
+        case "esquerda":
+          proxima_att = att - 1;
+          break;
+        case "direita":
+          proxima_att = att + 1;
+          break;
+      }
+      if(proximo_tri != null && proximo_tri >= 0 && proximo_tri < coisas.length) {
+        trimestre = proximo_tri;
+        mudar_coisas(trimestre, 0);
+      }
+      if(proxima_att != null && proxima_att >= 0 && proxima_att < coisas[trimestre].data.length) {
+        att = proxima_att;
+        mudar_coisas(trimestre, att);
+      }
+      return;
+    }
+    catch(e) {
+      console.log(e);
+    }
+  })
+
+  $(document).ready(function() {
+    let inicial = new URLSearchParams(window.location.search);
+    inicial = inicial.get("inicial"); //para fazer o trimestre ser diferente
+    if(inicial) {
+      mudar_coisas(inicial-1, 0);
+      trimestre = inicial;
+    } else {
+      mudar_coisas(trimestre, att);
+    }
+  });
+  $(document).keydown(function(event) {
+    if(event.which === 37) {
+      $("#esquerda").click();
+    }
+    if(event.which === 39) {
+      $("#direita").click();
+    }
+    if(event.which === 38) {
+      $("#cima").click();
+    }
+    if(event.which === 40) {
+      $("#baixo").click();
+    }
+  });
+</script>
+</html>

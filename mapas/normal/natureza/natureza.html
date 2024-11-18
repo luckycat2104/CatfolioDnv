@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://fonts.cdnfonts.com/css/concielian-break" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/malonet" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../atividades.css">
+    <link rel="stylesheet" href="../../../cursor.css">
+    <title>Atividades de natureza</title>
+</head>
+<body>
+    <h1 class="tituloATIVIDADES" >Atividades de Natureza</h1>
+      <div class="grid">   
+        <div class="item empty"></div>
+        <div class="seta" id="cima">
+          <img src="../../src/cima.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="esquerda">
+          <img src="../../src/esquerda.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="direita">
+          <img src="../../src/direita.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="baixo">
+          <img src="../../src/baixo.png">
+        </div>
+      </div>
+      <div class="atividades">
+        <img src="" id="img" />
+        <h2 id="titulo"></h2>
+        <h4 id="desc"></h4>
+      </div> 
+</body>
+
+<script>
+  var trimestre = 0; //trimestre que está agora
+  var att = 0; //atividade que está agora
+
+  var coisas = [ 
+    { //trimestre 1
+      "data": [ //lista de atividades
+          {
+            "titulo": "Meme Evolucionismo",                                             
+            "desc": "1° Trimestre - Estudar as ideias evolucionistas é importante para compreender a diversidade da vida na Terra e os processos que a desenvolveram ao longo do tempo. A teoria da evolução nos da idéias fundamentais sobre a adaptação, a origem das espécies e a conexão dos seres vivos. Foi uma atividade divertida.",
+            "src": "../../src/memeEvolucionimo.png",
+          },
+          {
+            "titulo": "Revisão Orgânica",
+            "desc": "1° Trimestre - Essa matéria é importante porque o estudo da química orgânica é para compreendermos a complexidade e a diversidade das moléculas que compõem os seres vivos e os materiais que nos rodeiam. Ela desempenha um papel fundamental em áreas como medicina, agricultura, indústria e tecnologia. Achei uma boa atividade, acredito que atividades de pesquisa são uma ótima forma de aprender!",
+            "link": "https://www.canva.com/design/DAGBc6NfCcA/W8tmoL9t0bGeLrYltYOk-Q/view?utm_content=DAGBc6NfCcA&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png",
+          },
+          {
+            "titulo": "Relatório Circuitos",
+            "desc": "1° Trimestre - O estudo de circuitos é crucial para entendermos como a eletricidade funciona. Essa compreensão é essencial para diversas áreas, como engenharia elétrica, telecomunicações, automação e computação. Com essa atividade eu descobri que não sirvo para isso...",
+            "link": "https://www.canva.com/design/DAGBgampo84/GOp12Cf9SwC7KQf_1Q9_gA/view?utm_content=DAGBgampo84&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+          
+      ]
+    },
+    { //trimestre 2
+      "data": [
+        {
+            "titulo": "Relações Ecológicas - Revista Eletrônica",
+            "desc": "2° Trimestre - Essa atividade ajuda a entender como os seres vivos interagem na natureza, usando exemplos de animais brasileiros. Além disso, mostra a importância da preservação da biodiversidade,  essencial para nossa vida e o futuro do planeta. Foi uma maneira interessante mas cansativa de entender o conteudo. Habilidades: C3 H15 H18 ",
+            "link": "https://www.canva.com/design/DAGGns8Zrzw/ShVdDa26oAyFmss3tyRV6w/view?utm_content=DAGGns8Zrzw&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+          {
+            "titulo": "Mapa mental sobre componentes dos circuitos elétricos.",
+            "desc": "2° Trimestre - Fazer um resumo ajuda a visualizar e organizar melhor como cada parte funciona e se conecta facilitando o entendimento de um tema complexo. O conhecimento sobre circuitos elétricos  essencial no mundo atual, onde a tecnologia está em todo lugar.",
+            "link": "https://www.canva.com/design/DAGN9udbLRY/iO0gH8FlxEsO74vtZHVrZg/view?utm_content=DAGN9udbLRY&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+          {
+            "titulo": " Cartaz - uso do plástico",
+            "desc": "2° Trimestre - Cartazes são uma forma de conscientizar sobre um problema ambiental urgente sensibilizando as pessoas. Essa atividade nos faz refletir sobre o impacto que o plástico tem na natureza e na nossa vida. Acredito na importancia de conscientizar as pessoas para que elas mudem seus habitos, mas focar apenas nesses habitos pequenos de forma simplória, como a maioria das grandes organizações faz, é apenas sonhar por uma utopia e tirar a atenção de coisas que realmente trariam um maior impacto, temos que lembrar que grandes empresas ganham muito com o uso indevido de recursos naturais e são elas que vão cobrar que você feche a torneira enquanto escova os dentes. Habilidades: C3 H15 H18",
+            "link": "https://www.canva.com/design/DAGJ5rKC_Rs/2MtJSJzYpnN07rvYtQpa8g/view?utm_content=DAGJ5rKC_Rs&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+          {
+            "titulo": "Avaliação Funções",
+            "desc": "2° Trimestre - Elaborar e apresentar a nossa pesquisa ajudou a entender melhor as propriedades e aplicações das diferentes funções orgânicas, além de conectar o conhecimento acadêmico com o mundo real, onde essas substâncias têm aplicações práticas. Eu gostei dessa atividade, foi bem tranquila e interessante, já que alem de apresentar também assistimos as apresentações dos outros sobre substancias diferentes. Habilidades: C3 H15 H18 C4 H23",
+            "link": "https://www.canva.com/design/DAGHRaGbCpo/ehq5RD7APd3Dngp24-dvKg/view?utm_content=DAGHRaGbCpo&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+      ]
+    },
+    { //trimestre 3
+      "data": [ //lista de atividades
+          {
+            "titulo": "Desequilibrios Ambientais",                                             
+            "desc": "3° Trimestre - Desenvolvemos habilidades de pesquisa, organização de informações e apresentação ao criar uma apresentação de slides sobre perda de biodiversidade. O objetivo foi informar sobre as causas e consequências desse problema, além de preparar uma explicação clara de duas questões do ENEM relacionadas.",
+            "link": "https://www.canva.com/design/DAGVhpljGzI/ZWHLjHqnS6DJ_DTXwmRq8w/view?utm_content=DAGVhpljGzI&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png",
+          },
+          {
+            "titulo": "Plano de expansão da produção de energia",
+            "desc": "3° Trimestre - O objetivo foi otimizar a produção de energia elétrica, minimizando custos e impactos ambientais, com foco em fontes renováveis. Analisamos as características regionais para criar um plano viável.",
+            "link": "https://www.canva.com/design/DAGWj069rYo/ITKNcd7o5empaB2iSDtXGw/view?utm_content=DAGWj069rYo&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png",
+          },
+          {
+            "titulo": " Emissões Radioativas  Enriquecimento Do Urânio",
+            "desc": "3° Trimestre - Desenvolvemos habilidades de pesquisa, estruturação de conteúdo e apresentação ao criar uma apresentação de slides sobre o enriquecimento do urânio. O objetivo foi explicar os processos envolvidos, suas aplicações na energia nuclear e as implicações ambientais e de segurança.",
+            "link": "https://www.canva.com/design/DAGPJW4Q4fw/BoBG6p-IfQPhnWGJd8DP5w/view?utm_content=DAGPJW4Q4fw&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+          {
+            "titulo": "Dicionário de ecologia",
+            "desc": "3° Trimestre - Desenvolvemos habilidades de pesquisa, síntese e design gráfico ao criar um dicionário ilustrado sobre conceitos de Ecologia. O objetivo foi facilitar a compreensão de termos ecológicos, contribuindo para o aprendizado na área.",
+            "link": "https://www.canva.com/design/DAGVDokq864/E9IT_-rXkEbsIXXaTl_oAw/view?utm_content=DAGVDokq864&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+            "src": "../../src/exemplo.png"
+          },
+      ]
+    }
+  ]
+
+  function mudar_coisas(trimestre, att) {
+      try { //muda titulo, descrição e imagem de acordo com trimestre e att selecionados
+        $("#titulo").text(coisas[trimestre].data[att].titulo);
+        $("#desc").text(coisas[trimestre].data[att].desc);
+        $("#desc").append(`<a id="linkzao" href="${coisas[trimestre].data[att].link}" target="_blank"> Clique aqui.</a>`);
+        $("#img").attr("src", coisas[trimestre].data[att].src);
+      }
+      catch(e) {
+        console.log(e);
+      }
+  }
+
+  //define oq acontece quando clica em alguma seta
+  $(".seta").on("click", function() {
+    try {
+      let proximo_tri = null;
+      let proxima_att = null;
+      let direcao = $(this).attr("id");
+      switch(direcao) {
+        case "cima":
+          proximo_tri = trimestre - 1;
+          break;
+        case "baixo":
+          proximo_tri = trimestre + 1;
+          break;
+        case "esquerda":
+          proxima_att = att - 1;
+          break;
+        case "direita":
+          proxima_att = att + 1;
+          break;
+      }
+      if(proximo_tri != null && proximo_tri >= 0 && proximo_tri < coisas.length) {
+        trimestre = proximo_tri;
+        mudar_coisas(trimestre, 0);
+      }
+      if(proxima_att != null && proxima_att >= 0 && proxima_att < coisas[trimestre].data.length) {
+        att = proxima_att;
+        mudar_coisas(trimestre, att);
+      }
+      return;
+    }
+    catch(e) {
+      console.log(e);
+    }
+  })
+
+  $(document).ready(function() {
+    let inicial = new URLSearchParams(window.location.search);
+    inicial = inicial.get("inicial"); //para fazer o trimestre ser diferente
+    if(inicial) {
+      mudar_coisas(inicial-1, 0);
+      trimestre = inicial;
+    } else {
+      mudar_coisas(trimestre, att);
+    }
+  });
+  $(document).keydown(function(event) {
+    if(event.which === 37) {
+      $("#esquerda").click();
+    }
+    if(event.which === 39) {
+      $("#direita").click();
+    }
+    if(event.which === 38) {
+      $("#cima").click();
+    }
+    if(event.which === 40) {
+      $("#baixo").click();
+    }
+  });
+</script>
+</body>
+</html>
