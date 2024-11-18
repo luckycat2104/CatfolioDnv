@@ -105,7 +105,7 @@
             "titulo": "Plano de expansão da produção de energia",
             "desc": "3° Trimestre - O objetivo foi otimizar a produção de energia elétrica, minimizando custos e impactos ambientais, com foco em fontes renováveis. Analisamos as características regionais para criar um plano viável.",
             "link": "https://www.canva.com/design/DAGWj069rYo/ITKNcd7o5empaB2iSDtXGw/view?utm_content=DAGWj069rYo&utm_campaign=designshare&utm_medium=link&utm_source=editor",
-            "src": "../../src/exemplo.png",
+            "src": "../src/energia.png",
           },
           {
             "titulo": " Emissões Radioativas  Enriquecimento Do Urânio",
@@ -117,7 +117,7 @@
             "titulo": "Dicionário de ecologia",
             "desc": "3° Trimestre - Desenvolvemos habilidades de pesquisa, síntese e design gráfico ao criar um dicionário ilustrado sobre conceitos de Ecologia. O objetivo foi facilitar a compreensão de termos ecológicos, contribuindo para o aprendizado na área.",
             "link": "https://www.canva.com/design/DAGVDokq864/E9IT_-rXkEbsIXXaTl_oAw/view?utm_content=DAGVDokq864&utm_campaign=designshare&utm_medium=link&utm_source=editor",
-            "src": "../../src/exemplo.png"
+            "src": "../src/dicionarioEco.png"
           },
       ]
     }
@@ -171,14 +171,15 @@
   })
 
   $(document).ready(function() {
-    let inicial = new URLSearchParams(window.location.search);
-    inicial = inicial.get("inicial"); //para fazer o trimestre ser diferente
-    if(inicial) {
-      mudar_coisas(inicial-1, 0);
-      trimestre = inicial;
-    } else {
-      mudar_coisas(trimestre, att);
-    }
+      let inicial = new URLSearchParams(window.location.search);
+      inicial = inicial.get("inicial"); //para fazer o trimestre ser diferente
+      inicial = parseInt(inicial) - 1;
+      if(inicial) {
+          mudar_coisas(inicial, 0);
+          trimestre = inicial;
+      } else {
+          mudar_coisas(trimestre, att);
+      }
   });
   $(document).keydown(function(event) {
     if(event.which === 37) {
