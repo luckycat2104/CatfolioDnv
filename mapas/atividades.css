@@ -21,6 +21,16 @@ a:hover{
     cursor: url(../src/sword.png), auto;
 }
 
+.btnHC{
+    height: 50px;
+    margin-right: 30px;
+    float: right;
+}
+
+.btnHC:hover{
+    cursor: url(../src/sword.png), auto;
+}
+
 .tituloATIVIDADES{
     color: rgb(236, 155, 155);
     font-family: 'Concielian Break', sans-serif;

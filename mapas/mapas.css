@@ -24,6 +24,10 @@ body {
     float: right;
 }
 
+.btnHC:hover{
+    cursor: url(../src/sword.png), auto;
+}
+
 .cardsmaterias{
     margin-left: 5vw;
     margin-top: 5vh;
