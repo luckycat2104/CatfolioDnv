@@ -27,6 +27,7 @@ body {
 .mehome{
     float: left;
     width: 50vw;
+    margin-top: -25vh;
 }
 
 #euzis{
@@ -35,7 +36,7 @@ body {
 
 #containerTitulo{
     margin-left: 49vw;
-    margin-top: 30vh;
+    margin-top: 25vh;
 }
 
 #titulo{
