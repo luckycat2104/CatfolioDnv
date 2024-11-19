@@ -4,15 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <link href="https://fonts.cdnfonts.com/css/concielian-break" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/malonet" rel="stylesheet">
 
     <link rel="stylesheet" href="../../atividades.css">
     <link rel="stylesheet" href="../../../cursor.css">
-    <title>Programação de Aplicativos</title>
+    <link rel="stylesheet" href="../../../popUp.css" >
+    <title>Programação de aplicativos</title>
 </head>
 <body>
-    
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <span id="closePopup"><img class="close" src="../../../src/fechar.png"></span>
+        <h2>Como jogar?</h2>
+        <p>   Ao decidir qual mapa será explorado, você deverá escolher o trimestre que deseja. 
+            Já dentro do trimestre, você poderá navegar pelas atividades pelos botões azuis, e pelos trimestres pelos botões amarelos</p>
+        <img src="../../../src/exSetas.png">
+    </div>
+    <button id="openPopup"> <img class="btnHC" src="../../../src/tutorial.png"></button>
+    <a href="../../../index.html" ><img class="btnHC" src="../../../src/inicio.png"></a>
+    <a href="../../../ME/me.html"><img class="btnHC" src="../../../src/abtMe.png"></a>
+    <h1 class="tituloATIVIDADES" >Atividades de Programação de aplicativos</h1>
+      <div class="grid">   
+        <div class="item empty"></div>
+        <div class="seta" id="cima">
+          <img src="../../src/cima.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="esquerda">
+          <img src="../../src/esquerda.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="direita">
+          <img src="../../src/direita.png">
+        </div>
+        <div class="item empty"></div>
+        <div class="seta" id="baixo">
+          <img src="../../src/baixo.png">
+        </div>
+      </div>
+      <div class="atividades">
+        <img src="" id="img" />
+        <h2 id="titulo"></h2>
+        <h4 id="desc"></h4>
+      </div> 
 </body>
+
+<script>
+  var trimestre = 0; //trimestre que está agora
+  var att = 0; //atividade que está agora
+
+  var coisas = [ 
+    { //trimestre 1
+      "data": [ //lista de atividades
+          {
+            "titulo": "Atividade Express",                                             
+            "desc": "3° Trimestre - Essa foi uma introdução à React.",
+            "link": "https://github.com/luckycat2104/Calculador-de-Horas/tree/main",
+            "src": "../src/clock.png",
+          },
+          {
+            "titulo": "API - Github",
+            "desc": "1° Trimestre - Essa foi uma introdução à API.",
+            "link": "https://github.com/luckycat2104/1trimestre3b",
+            "src": "../src/github.png",
+          }
+      ]
+    }
+  ]
+
+  function mudar_coisas(trimestre, att) {
+      try { //muda titulo, descrição e imagem de acordo com trimestre e att selecionados
+        $("#titulo").text(coisas[trimestre].data[att].titulo);
+        $("#desc").text(coisas[trimestre].data[att].desc);
+        $("#desc").append(`<a id="linkzao" href="${coisas[trimestre].data[att].link}" target="_blank"> Clique aqui.</a>`);
+        $("#img").attr("src", coisas[trimestre].data[att].src);
+      }
+      catch(e) {
+        console.log(e);
+      }
+  }
+
+  //define oq acontece quando clica em alguma seta
+  $(".seta").on("click", function() {
+    try {
+      let proximo_tri = null;
+      let proxima_att = null;
+      let direcao = $(this).attr("id");
+      switch(direcao) {
+        case "cima":
+          proximo_tri = trimestre - 1;
+          break;
+        case "baixo":
+          proximo_tri = trimestre + 1;
+          break;
+        case "esquerda":
+          proxima_att = att - 1;
+          break;
+        case "direita":
+          proxima_att = att + 1;
+          break;
+      }
+      if(proximo_tri != null && proximo_tri >= 0 && proximo_tri < coisas.length) {
+        trimestre = proximo_tri;
+        mudar_coisas(trimestre, 0);
+      }
+      if(proxima_att != null && proxima_att >= 0 && proxima_att < coisas[trimestre].data.length) {
+        att = proxima_att;
+        mudar_coisas(trimestre, att);
+      }
+      return;
+    }
+    catch(e) {
+      console.log(e);
+    }
+  })
+
+  $(document).ready(function() {
+      let inicial = new URLSearchParams(window.location.search);
+      inicial = inicial.get("inicial"); //para fazer o trimestre ser diferente
+      inicial = parseInt(inicial) - 1;
+      if(inicial) {
+          mudar_coisas(inicial, 0);
+          trimestre = inicial;
+      } else {
+          mudar_coisas(trimestre, att);
+      }
+  });
+  $(document).keydown(function(event) {
+    if(event.which === 37) {
+      $("#esquerda").click();
+    }
+    if(event.which === 39) {
+      $("#direita").click();
+    }
+    if(event.which === 38) {
+      $("#cima").click();
+    }
+    if(event.which === 40) {
+      $("#baixo").click();
+    }
+  });
+</script>
+<script src="../../../popUp.js"></script>
 </html>

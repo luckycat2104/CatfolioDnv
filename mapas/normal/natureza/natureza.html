@@ -9,10 +9,20 @@
 
     <link rel="stylesheet" href="../../atividades.css">
     <link rel="stylesheet" href="../../../cursor.css">
+    <link rel="stylesheet" href="../../../popUp.css" >
     <title>Atividades de natureza</title>
 </head>
 <body>
-  <a href="https://www.canva.com/design/DAGW12tUknw/QXA-ajYpbTbGxK2WCGevUw/view?utm_content=DAGW12tUknw&utm_campaign=designshare&utm_medium=link&utm_source=editor"> <img class="btnHC"  src="../../../src/tutorial.png"></a>
+  <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <span id="closePopup"><img class="close" src="../../../src/fechar.png"></span>
+        <h2>Como jogar?</h2>
+        <p>   Ao decidir qual mapa será explorado, você deverá escolher o trimestre que deseja. 
+            Já dentro do trimestre, você poderá navegar pelas atividades pelos botões azuis, e pelos trimestres pelos botões amarelos</p>
+        <img src="../../../src/exSetas.png">
+    </div>
+    <button id="openPopup"> <img class="btnHC" src="../../../src/tutorial.png"></button>
+
     <a href="../../../index.html" ><img class="btnHC" src="../../../src/inicio.png"></a>
     <a href="../../../ME/me.html"><img class="btnHC" src="../../../src/abtMe.png"></a>
     <h1 class="tituloATIVIDADES" >Atividades de Natureza</h1>
@@ -199,5 +209,6 @@
     }
   });
 </script>
+<script src="../../../popUp.js"></script>
 </body>
 </html>

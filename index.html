@@ -12,11 +12,25 @@
     
     <link rel="stylesheet" href="../cursor.css" >
     <link rel="stylesheet" href="./home.css" >
+    <link rel="stylesheet" href="./popUp.css" >
     <title>Home</title>
 </head>
 <body>
+    <audio autoplay>
+        <source src="./audios/inicio.mp3" type="audio/mp3" >
+    </audio>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <span id="closePopup"><img class="close" src="./src/fechar.png"></span>
+        <h2>Como jogar?</h2>
+        <p>   Ao decidir qual mapa será explorado, você deverá escolher o trimestre que deseja. 
+            Já dentro do trimestre, você poderá navegar pelas atividades pelos botões azuis, e pelos trimestres pelos botões amarelos</p>
+        <img src="./src/exSetas.png">
+    </div>
+
     <a href="./ME/me.html"> <img class="btnHC" id="euzis" src="./src/abtMe.png"></a>
-    <a href="https://www.canva.com/design/DAGW12tUknw/QXA-ajYpbTbGxK2WCGevUw/view?utm_content=DAGW12tUknw&utm_campaign=designshare&utm_medium=link&utm_source=editor"> <img class="btnHC" src="./src/tutorial.png"></a>
+    <button id="openPopup"> <img class="btnHC" src="./src/tutorial.png"></button>
     <img class="mehome" src="./src/capaCats.png" >
     <div id="bagulhoTodo">
         <div id="containerTitulo" >
@@ -37,4 +51,5 @@
         </div>
     </div>
 </body>
+<script src="./popUp.js"></script>
 </html>
