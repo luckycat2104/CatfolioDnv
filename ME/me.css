@@ -37,3 +37,15 @@ body {
 .btnHC:hover{
     cursor: url(../src/sword.png), auto;
 }
+
+
+.infos{
+    display: inline-block;
+}
+
+.euimg{
+    width: 30%;
+    margin-left: 7%;
+    margin-top: -17%;
+}
+
